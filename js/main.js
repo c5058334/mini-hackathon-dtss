@@ -1,6 +1,8 @@
 (function () {
     const grid = document.getElementById('sudoku-grid2');
 
+    let foundInvalid = false;
+
     for (let column = 0; column < 9; column++) {
         for (let row = 0; row < 9; row++) {
             
@@ -18,11 +20,14 @@
                 
 
                 let validator = (selector) => {
+                    foundInvalid = false;
+
                     let theseElements = document.querySelectorAll(selector);
                     let usedValues = [];
                     theseElements.forEach((cell) => {
                         if (cell.value && usedValues.includes(cell.value)) {
                             theseElements.forEach(buddies => buddies.classList.add('invalid'));
+                            foundInvalid = true;
                         } else {
                             usedValues.push(cell.value);
                         }                    
@@ -34,6 +39,8 @@
                 validator(`.row-${row}`);
                 validator(`.col-${column}`);
                 validator('.' + boxMaths(row, column));
+
+                document.getElementById("status").innerText = "Status: " + (foundInvalid ? "Invalid": "Valid");
             };
         }
     }
