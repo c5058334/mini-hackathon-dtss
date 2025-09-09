@@ -16,7 +16,7 @@
 }
 
 .invalid{
-    border-width: 2px;
-    border-color: red;
+    border: solid red 2px !important;
+    border-radius: 4px;
     background-color: #FF797A;
 }
