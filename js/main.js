@@ -49,6 +49,8 @@
         let boxes = document.querySelectorAll('input')
         boxes.forEach(element => {
             element.value = "";
+            if(element.classList.contains("invalid"))
+                element.classList.remove("invalid");
         });
     }
 
