@@ -5,7 +5,7 @@
 
     for (let column = 0; column < 9; column++) {
         for (let row = 0; row < 9; row++) {
-            
+
             const input = document.createElement('input');
             input.type = 'text';
             input.maxLength = 1;
@@ -14,10 +14,10 @@
 
 
             input.onchange = (event) => {
-                
+
                 // Handle input change here
                 console.log(`Input changed at row ${row}, column ${column}:`, event.target.value);
-                
+
 
                 let validator = (selector) => {
                     foundInvalid = false;
@@ -30,12 +30,12 @@
                             foundInvalid = true;
                         } else {
                             usedValues.push(cell.value);
-                        }                    
+                        }
                     });
                 };
 
                 let theseElements = document.querySelectorAll('.invalid').forEach(invalids => invalids.classList.remove('invalid'));
-                
+
                 validator(`.row-${row}`);
                 validator(`.col-${column}`);
                 validator('.' + boxMaths(row, column));
@@ -56,8 +56,12 @@
         let boxes = document.querySelectorAll('input')
         boxes.forEach(element => {
             element.value = "";
+
             if(element.classList.contains("invalid"))
                 element.classList.remove("invalid");
+
+            foundInvalid = false;
+            document.getElementById("status").innerText = "Status: Incomplete";
         });
     }
 
