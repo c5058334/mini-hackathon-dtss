@@ -12,6 +12,11 @@ header h2 {
     color: #fff;
 }
 
+.application{
+    max-width: 800px;
+    margin: auto;
+}
+
 
 /* Header uses flexbox for layout */
 header {
