@@ -42,9 +42,16 @@
         calcRow = Math.floor(row / 3);
         calcCol = Math.floor(col / 3);
 
-        //console.log(row + " - " + calcRow);
-        console.log(col + " - " + calcCol);
-
         return 'box-' + calcRow + calcCol;
     }
+
+    function clearAll(){
+        let boxes = document.querySelectorAll('input')
+        boxes.forEach(element => {
+            element.value = "";
+        });
+    }
+
+    document.getElementById('clearButton').addEventListener('click', clearAll);
+
 })();
