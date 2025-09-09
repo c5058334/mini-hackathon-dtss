@@ -20,8 +20,6 @@
 
 
                 let validator = (selector) => {
-                    foundInvalid = false;
-
                     let theseElements = document.querySelectorAll(selector);
                     let usedValues = [];
                     theseElements.forEach((cell) => {
@@ -36,6 +34,7 @@
 
                 let theseElements = document.querySelectorAll('.invalid').forEach(invalids => invalids.classList.remove('invalid'));
 
+                foundInvalid = false;
                 validator(`.row-${row}`);
                 validator(`.col-${column}`);
                 validator('.' + boxMaths(row, column));
