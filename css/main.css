@@ -13,8 +13,11 @@ header h2 {
 }
 
 .application{
-    max-width: 800px;
-    margin: auto;
+    width: 100%;
+}
+
+.container{
+    width: 100%;
 }
 
 
@@ -34,6 +37,8 @@ header > div {
     display: grid;
     grid-template-columns: 20px 20px 20px 20px 20px 20px 20px 20px 20px;
     gap: 1px;
+    max-width: 200px;
+    margin: auto;
 }
 
 #sudoku-grid2>input {
