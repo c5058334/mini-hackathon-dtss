@@ -1,0 +1,9 @@
+.sudoku-grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto;
+    gap: 1px;
+}
+
+.sudoku-grid > input{
+    max-width: 10px;
+}
