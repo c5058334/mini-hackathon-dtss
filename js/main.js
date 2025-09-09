@@ -7,7 +7,7 @@
             const input = document.createElement('input');
             input.type = 'text';
             input.maxLength = 1;
-            input.className = `cell row-${row} col-${column} box-${boxMaths(row, column)}`;
+            input.className = `cell row-${row} col-${column} ${boxMaths(row, column)}`;
             grid.appendChild(input);
 
 
@@ -33,6 +33,7 @@
                 
                 validator(`.row-${row}`);
                 validator(`.col-${column}`);
+                validator('.' + boxMaths(row, column));
             };
         }
     }
@@ -44,6 +45,6 @@
         //console.log(row + " - " + calcRow);
         console.log(col + " - " + calcCol);
 
-        return calcRow = calcCol;
+        return 'box-' + calcRow + calcCol;
     }
 })();
