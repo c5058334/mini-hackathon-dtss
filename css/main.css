@@ -6,15 +6,20 @@ body {
 
 /* Header styles */
 .headerContainer {
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
 }
+
 header h2 {
     color: #fff;
 }
 
-.application{
-    max-width: 800px;
+.application {
+    max-width: 200px;
     margin: auto;
+}
+
+.container {
+    width: 100%;
 }
 
 
@@ -24,7 +29,8 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-header > div {
+
+header>div {
     padding: 10px;
 }
 
@@ -54,18 +60,21 @@ header > div {
     background-color: #FF797A;
 }
 
-.col-2, .col-5, .col-8{
+.col-2,
+.col-5,
+.col-8 {
     border-bottom: solid black 2px !important;
 }
 
 
 /* Footer styles */
 footer {
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
     margin-top: 40px;
     padding: 40px;
 }
-footer > div > p {
+
+footer>div>p {
     color: #fff;
     text-align: center;
     font-size: 0.8rem;
