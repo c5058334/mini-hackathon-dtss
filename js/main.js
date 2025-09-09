@@ -13,7 +13,7 @@
             grid.appendChild(input);
 
 
-            input.onchange = (event) => {
+            input.oninput = (event) => {
 
                 // Handle input change here
                 console.log(`Input changed at row ${row}, column ${column}:`, event.target.value);
